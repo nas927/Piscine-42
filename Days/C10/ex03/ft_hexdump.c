@@ -70,7 +70,7 @@ int		main(int ac, char **av)
 		if (av[1][0] == '-' && av[1][1] == 'C')
 		{
 			while (i < ac)
-				count += last_thing(file, av[i++], count);
+				count = last_thing(file, av[i++], count);
 		}
 	}
 	return (0);

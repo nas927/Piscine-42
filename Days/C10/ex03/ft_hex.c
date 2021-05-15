@@ -49,16 +49,16 @@ void	ft_count(long count)
 	int		i;
 
 	if (count >= 0 && count < 16)
-		i = 5;
+		i = 6;
 	else if (count >= 16 && count <= 255)
-		i = 4;
+		i = 5;
 	else if (count > 255 && count < 4046)
-		i = 3;
+		i = 4;
 	else if (count >= 4096 && count < 65536)
-		i = 2;
+		i = 3;
 	else
-		i = 0;
-	write(1, "00000", i);
+		i = 2;
+	write(1, "000000", i);
 	ft_decimal_hex(count);
 	write(1, " ", 1);
 }
