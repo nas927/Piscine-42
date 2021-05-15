@@ -1,0 +1,25 @@
+on se connecte à git localement avec 
+
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+
+ensuite on ajoute les fichiers du dossier présent exemple : 
+git add *
+
+ensuite on commit et on met un commentaire avec :
+git commit -m "votre phrase"
+
+ensuite on ajoute le serveur pour cela rendez-vous sur github.com créer un compte avec 42 vous en aurez un 
+Créer le ensuite en privée ou public et toujours sur le site cliquez sur code vous aurez un lien faites alors : 
+
+git add remote https://github.com/nas927/Piscine-42.git
+
+Pour ma part c'est ce lien pour la piscine de 42 vous aurez un lien à vous enfin bref
+
+Ensuite faite push ce que vous voulez sur ce lien les dossiers et les archives suivront
+
+git push
+
+entrez votre email
+votre mot de passe
+ET TOUT EST SUR GIT^^.

@@ -1,0 +1,8 @@
+<1> <2> <3> <4>
+
+1 : quel octet
+2 : quoi tester un string, un char, un int
+3 : le string, le char, le int en question par exemple 42 va être testé
+4 : la chose à afficher si le ficher a bien été détecté bon
+file -C -m pour compiler le ft_magic et faire en sorte de l'utiliser en faisant
+file -m <fichier à tester le type>
