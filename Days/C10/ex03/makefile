@@ -10,7 +10,7 @@ new:
 main: $(OBJ)
 	gcc $^ -o ft_hexdump
 exec: txt
-	./ft_hexdump -C txt
+	./ft_hexdump -C txt nex.c
 
 clean: %.c
 	rm *.o

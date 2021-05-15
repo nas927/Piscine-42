@@ -11,7 +11,7 @@ void	ft_putstr(char *str)
 }
 
 /*Affiche tous les charactères sauf ceux qui ne sont pas dans la table ascii man ascii pour voir*/
-void	ft_put_tab(wchar_t *str)
+void	ft_put_tab(char *str)
 {
 	int		i;
 
@@ -64,7 +64,7 @@ void	ft_count(long count)
 }
 
 /*Converti toute une chaine en hexa jusqu'à la 16 eme lettre*/
-int		ft_convert_str(wchar_t *str, long count)
+int		ft_convert_str(char *str, long count)
 {
 	int		i;
 

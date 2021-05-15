@@ -20,9 +20,9 @@ int		ft_count_read(int file, char *str)
 	return (i);
 }
 
-void	ft_buffer_to_tab(int file, wchar_t *tab, int i)
+void	ft_buffer_to_tab(int file, char *tab, int i)
 {
-	wchar_t	buffer;
+	char	buffer;
 
 	while (read(file, &buffer, 1) != 0)
 	{
@@ -30,19 +30,19 @@ void	ft_buffer_to_tab(int file, wchar_t *tab, int i)
 			buffer = 128;
 		else if ((int)buffer < 0)
 			buffer = '.';
-		tab[i++] = (char)buffer;
+		tab[i++] = buffer;
 	}
 }
 
 int		last_thing(int file, char *str, long count)
 {
 	int		i;
-	wchar_t	*tab;
+	char	*tab;
 
 	i = ft_count_read(file, str);
 	if (!i)
 		return (0);
-	if (!(tab = (wchar_t *)malloc(sizeof(wchar_t) * i)))
+	if (!(tab = (char *)malloc(sizeof(char) * i)))
 		return (0);
 	tab[i] = '\0';
 	file = open(str, O_RDONLY);
