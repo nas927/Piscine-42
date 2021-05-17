@@ -6,7 +6,7 @@
 /*   By: nassim <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 20:46:09 by nassim            #+#    #+#             */
-/*   Updated: 2021/05/16 18:02:38 by nassim           ###   ########.fr       */
+/*   Updated: 2021/05/17 16:51:34 by nassim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,15 +52,17 @@ int     ft_check_all(char *queens)
 	return (1);
 }
 
-// Va initialiser tout le tableau à 0
-void    init(char *queens)
+void	init(char *queens)
 {
-	int     i;
-
-	i = 0;
-	while (i < 10)
-		queens[i++] = '0';
-	queens[i] == '\0';
+	queens[0] = '0';
+	queens[1] = '2';
+	queens[2] = '5';
+	queens[3] = '0';
+	queens[5] = '0';
+	queens[6] = '0';
+	queens[7] = '0';
+	queens[8] = '0';
+	queens[9] = '0';
 }
 
 // Va incrémenter mon tableau de 0 à 999999999
