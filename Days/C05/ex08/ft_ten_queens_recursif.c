@@ -37,36 +37,33 @@ int		ft_abs(int nb)
 	else
 		return (-(nb));
 }
-
-void	ft_recursif_queens(int *queens, int position, int *nb_solutions)
-{
-	int		i;
-	int		j;
-
-	i = 0;
-	if (position == N)
-	{
-		ft_print_tab(queens);
-		*nb_solutions += 1;
-	}
-	while (i < N)
-	{
-		j = 0;
-		while (j < position)
-		{
-			/*prenons queens[3] = 4 i sera égal à 4 donc on passera testez sur une feuille en regardant chaque étape pour comprendre*/
-			if (queens[j] == i || position - j == ft_abs(queens[j] - i))
-				break ;
-			j++;
-		}
-		/*La partie la plus compliqué du programme il faut bien connaitre la récursivité pour comprendre ce qu'il se passe en gros le programme va tester toutes les possibilités en même temps puis il va revenir au début pour tout afficher*/
-		if (j == position)
-		{
-			queens[position] = i;
-			ft_recursif_queens(queens, position + 1, nb_solutions);
-		}
-		i++;
-	}
+void    ft_recursif_queens(int *queens, int colonne, int *nb_solutions)  
+{                                                              
+	int             ligne;                   
+	int             position;               
+	
+        ligne = 0;
+	if (colonne == N) 
+	{       
+		ft_print_tab(queens);        
+		*nb_solutions += 1;   
+	}                          
+	while (ligne < N)
+	{                     
+		position = 0;   
+		while (position < colonne)   
+		{                            
+			if (queens[position] == ligne || colonne - position == ft_abs(queens[position] - ligne))     
+				position = colonne;          
+			position++;   
+		}           
+		if (position == colonne)                 
+		{             
+			queens[colonne] = ligne;       
+			ft_recursif_queens(queens, colonne + 1, nb_solutions);          
+		}                                                                         
+		ligne++;                                                                                 
+	}                                                                                                              
 }
 
 int		ft_ten_queens_recursif(void)
